@@ -100,5 +100,6 @@ tmp$NCOMPLETE
 tmp$COEFFICIENTS
 Z3 <- as.data.frame(Banknotes)
 names(Z3) <- c("x1","x2", "x3", "x4", "x5", "x6","y")
-summary(glm(y ~ x1+x2+x3+x4+x5+x6, data=Z3, family=binomial(link=logit), trace=TRUE, maxit=30))
+summary(glm(y ~ x1+x2+x3+x4+x5+x6, data=Z3, family=binomial(link=logit), 
+            trace=TRUE, maxit=30))
 }

@@ -1,7 +1,7 @@
 #  ncomplete.R
 #  -------------
 #  Peter J. Rousseeuw, Andreas Christmann
-#  Version         March, 2003
+#  Version         MAY/2004
 #  Microsoft Windows XP
 #  !!! NO WARRANTY !!!
 #  This program computes an approximation of n_complete
@@ -19,7 +19,7 @@
 #  have to be specified appropriately.
 ###########################################################################
 
-ncomplete1.for <- function(Z,NDIR=10) {
+ncomplete1.for <- function(Z,NDIR=10000) {
   N <- nrow(Z); NP <- ncol(Z)-1; NP1 <- NP+1;
   MA <- matrix(rep(0,N),ncol=1);           RESID <- matrix(rep(0,N),ncol=1);
   JRES <- matrix(rep(0,N),ncol=1);         JSAMP <- matrix(rep(0,NP),ncol=1);
@@ -50,7 +50,8 @@ ncomplete1.for <- function(Z,NDIR=10) {
     as.integer(NCOMPLETE),
     as.integer(JLV), as.integer(JRV), as.double(ETAS),
     as.integer(Y), as.integer(M), as.integer(YS), as.integer(MS), 
-    as.integer(Index), as.integer(FF), as.integer(S)
+    as.integer(Index), as.integer(FF), as.integer(S),
+    PACKAGE="ncomplete"
    )} 
 
 ncomplete.for <- function(Z,NDIR=10000,PLOT=FALSE){
