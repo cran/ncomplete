@@ -1,0 +1,4 @@
+ncomplete       Computes the quantity n_complete for binary regression models.
+                If n_complete=0 then the data set has complete separation and the maximum 
+                likelihood estimate in logistic regression models and probit regression models do 
+                not exist.
